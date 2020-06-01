@@ -31,7 +31,7 @@ const StyledLink = styled(FadeLink)`
 const Content = styled.div`
   margin-left: auto;
   margin-right: auto;
-  max-width: ${rhythm(24)};
+  max-width: ${rhythm(28)};
   padding: ${`${rhythm(1.5)} ${rhythm(3 / 4)}`};
 `;
 

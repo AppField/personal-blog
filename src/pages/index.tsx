@@ -22,6 +22,7 @@ const PageTitle = styled.h2`
 const BlogCard = styled.div`
   margin-bottom: 3.5rem;
   color: var(--color-text);
+
   h3 {
     margin-bottom: ${rhythm(1 / 4)};
     color: var(--color-primary);

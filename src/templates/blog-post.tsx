@@ -10,10 +10,19 @@ import { styledScale, rhythm } from '../utils/typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
+import 'prismjs/themes/prism-okaidia.css';
+
 interface Props extends PageRendererProps {
   pageContext: SitePageContext;
   data: Query;
 }
+
+const BlogStyles = styled.div`
+  pre {
+    font-size: 0.85rem;
+    margin-bottom: ${rhythm(1)};
+  }
+`;
 
 const BlogPostTitle = styled.h1`
   color: var(--color-primary);
@@ -81,7 +90,8 @@ const BlogPostTemplate = (props: Props) => {
       <Date>
         <em>{frontmatter.date}</em>
       </Date>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <BlogStyles dangerouslySetInnerHTML={{ __html: html }} />
+
       <Divider />
       <Bio />
       <PostNavigator>
