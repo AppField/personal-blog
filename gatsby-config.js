@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `RMuehlfeldner Blog`,
+    title: `RMuhlfeldner Blog`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     author: {
       name: `Roman Mühlfeldner`,
@@ -9,6 +9,10 @@ module.exports = {
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       twitter: `rmuhlfeldner`,
+      linkedin: `in/roman-mühlfeldner`,
+      xing: `profile/Roman_Muehlfeldner`,
+      github: `AppField`,
+      dev: `rmuehlfeldner`,
     },
   },
   plugins: [
@@ -54,22 +58,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `RMuehlfeldner Blog`,
-        short_name: `RMuehlfeldner`,
+        name: `RMuhlfeldner Blog`,
+        short_name: `RMuhlfeldner`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ae2a59`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
@@ -83,4 +87,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

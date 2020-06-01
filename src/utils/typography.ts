@@ -1,5 +1,5 @@
 import { CSSObject } from "styled-components"
-import Typography from "typography"
+import Typography, { TypographyOptions } from "typography"
 import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = () => {
@@ -7,7 +7,7 @@ Wordpress2016.overrideThemeStyles = () => {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
-  }
+  } as TypographyOptions
 }
 
 delete Wordpress2016.googleFonts
