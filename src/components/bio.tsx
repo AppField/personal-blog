@@ -84,22 +84,44 @@ const Bio = () => {
         a Frontend developer with an ongoing study in Business Informatics.
         {` `}
         <br />{' '}
-        <Social href={`https://twitter.com/${social.twitter}`} target="_blank">
+        <Social
+          href={`https://twitter.com/${social.twitter}`}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Find me on Twitter"
+        >
           <FontAwesomeIcon icon={faTwitter} />
         </Social>
         <Social
           href={`https://linkedin.com/${social.linkedin}`}
           target="_blank"
+          rel="noreferrer"
+          aria-label="Find me on Linked In"
         >
           <FontAwesomeIcon icon={faLinkedin} />
         </Social>
-        <Social href={`https://xing.com/${social.xing}`} target="_blank">
+        <Social
+          href={`https://xing.com/${social.xing}`}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Find me on Xing"
+        >
           <FontAwesomeIcon icon={faXing} />
         </Social>
-        <Social href={`https://github.com/${social.github}`} target="_blank">
+        <Social
+          href={`https://github.com/${social.github}`}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Find me on GitHub"
+        >
           <FontAwesomeIcon icon={faGithub} />
         </Social>
-        <Social href={`https://dev.to/${social.dev}`} target="_blank">
+        <Social
+          href={`https://dev.to/${social.dev}`}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Find me on DEV"
+        >
           <FontAwesomeIcon icon={faDev} />
         </Social>
       </p>
