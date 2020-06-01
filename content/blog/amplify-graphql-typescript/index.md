@@ -1,7 +1,7 @@
 ---
 title: AWS Amplify GraphQL API with a React TypeScript Frontend
 date: '2020-06-01'
-description: 'Setup an AWS Amplify GraphQL API and consume it in a React Frontend TypeScript App'
+description: 'Setup an AWS Amplify GraphQL API and consume it in a React Frontend TypeScript App. Improve type-safety for GraphQL calls and reduce boilerplate code'
 ---
 
 ## Introduction
@@ -19,7 +19,7 @@ Since Amplify is an AWS service it is required to sign in to the [AWS Console](h
 For the React frontend we will use a simple Create React App (CRA):
 Run these CLI commands to create it and add the Amplify library
 
-```sh
+```shell
 npx create-react-app amplify-typescript-demo --template typescript
 cd amplify-typescript-demo
 npm install --save aws-amplify
@@ -32,13 +32,13 @@ The official documentation describes it very well and even has a video: [Install
 
 After the CLI is configured properly, we can initialize Amplify in our project:
 
-```sh
+```shell
 amplify init
 ```
 
 This command wil initialize Amplify inside our project and it needs some information. Since we have a basic CRA App, we can simply just press enter and continue with the default options:
 
-```sh
+```shell
  Enter a name for the project `amplifytypescriptdem`
  Enter a name for the environment `dev`
  Choose your default editor: `Visual Studio Code`
@@ -56,13 +56,13 @@ This command wil initialize Amplify inside our project and it needs some informa
 
 Now the GraphQL API can be added by running:
 
-```sh
+```shell
 amplify init
 ```
 
 This will starty by asking some questions:
 
-```sh
+```shell
  Please select from one of the below mentioned services: `GraphQL`
  Provide API name: `DemoAPI`
  Choose the default authorization type for the API: `API key`
@@ -91,13 +91,13 @@ type Todo @model {
 The API is ready to be tested! We don't have to configure any Lambda functions or AppSync manually. Everything's managed by Amplify.
 To test the API we don't even have to deploy it in the cloud. Amplify has the ability to mock the whole API locally:
 
-```sh
+```shell
 amplify mock api
 ```
 
 Again, this will also ask some questions. And here comes the TypeScript part. This call will auto-generate TypeScript models for our React app. Simply choose `typescript` and go ahead with the default options:
 
-```sh
+```shell
  Choose the code generation language target `typescript`
  Enter the file name pattern of graphql queries, mutations and subscriptions `src/graphql/**/*.ts`
  Do you want to generate/update all possible GraphQL operations - queries, mutations and subscriptions `Yes`
@@ -108,7 +108,7 @@ Again, this will also ask some questions. And here comes the TypeScript part. Th
 
 Finally, you should get a message with the local address on which the API is running:
 
-```sh
+```shell
 AppSync Mock endpoint is running at http://192.168.0.143:20002
 ```
 
