@@ -57,7 +57,7 @@ npm install @ngx-translate/core @ngx-translate/http-loader --save
 
 Setup the `TranslateModule` in the `app.module.ts` file:
 
-```js
+```javascript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -91,7 +91,7 @@ export class AppModule {}
 
 Add the `TranslateService` to the `app.component.ts` file and set the default language as well use it:
 
-```js
+```javascript
 constructor(
   private readonly translate: TranslateService
 ) {
@@ -158,7 +158,7 @@ _That's why the services provided by `TranslateModule` have to be mocked!_
 
 To mock the `translate` pipe open the `app.component.spec.ts` file and add a new custom pipe `TranslatePipeMock` before the `describe` function:
 
-```js
+```javascript
 // ...omitted
 
 import { Pipe, PipeTransform } from '@angular/core';
@@ -179,7 +179,7 @@ export class TranslatePipeMock implements PipeTransform {
 
 Next step is to add it to the declarations array and provide it:
 
-```js
+```javascript
 // ... omitted
 
 describe('AppComponent', () => {
@@ -230,7 +230,7 @@ ng g module TranslateTesting
 
 Inside `translate-testing.module.ts` the mock classes will be implemented and provided.
 
-```js
+```javascript
 import { Injectable, NgModule, Pipe, PipeTransform } from '@angular/core';
 import { TranslateLoader, TranslateModule, TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Observable, of } from 'rxjs';
@@ -309,7 +309,7 @@ This file should cover all services provided by the TranslateModule
 
 Now, the `TranslatePipeMock` class can be removed from the `app.component.spec.ts` file. Instead, the `TranslateTestingModule` will be imported:
 
-```js
+```javascript
 // ... omitted
 import { TranslateTestingModule } from './translate-testing/translate-testing.module';
 
