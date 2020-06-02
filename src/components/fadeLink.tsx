@@ -9,7 +9,7 @@ const FADE_TIME = 0.3
 type Props = Partial<ComponentProps<typeof Link>>
 
 const FadeLink = (props: Props) => {
-  const { children, ...linkProps } = props
+  const { children, ...linkProps } = props  
 
   return (
     <AniLink fade={true} duration={FADE_TIME} {...linkProps}>
