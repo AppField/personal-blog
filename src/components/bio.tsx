@@ -111,9 +111,6 @@ export const PureBio: React.FC<PureBioProps> = ({ avatar, site }) => {
         a Frontend developer with an ongoing study in Business Informatics.
         {` `}
         <br />{' '}
-        <Social href={`https://twitter.com/${social.twitter}`} target="_blank">
-          <FontAwesomeIcon icon={faTwitter} />
-        </Social>
         <Social
           href={`https://linkedin.com/${social.linkedin}`}
           target="_blank"
@@ -122,6 +119,9 @@ export const PureBio: React.FC<PureBioProps> = ({ avatar, site }) => {
         </Social>
         <Social href={`https://xing.com/${social.xing}`} target="_blank">
           <FontAwesomeIcon icon={faXing} />
+        </Social>
+        <Social href={`https://twitter.com/${social.twitter}`} target="_blank">
+          <FontAwesomeIcon icon={faTwitter} />
         </Social>
         <Social href={`https://github.com/${social.github}`} target="_blank">
           <FontAwesomeIcon icon={faGithub} />
