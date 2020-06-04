@@ -108,7 +108,7 @@ export const PureBio: React.FC<PureBioProps> = ({ avatar, site }) => {
       />
       <p>
         My name is <strong>{author.name}</strong>. I live and work in Vienna as
-        a Frontend developer with an ongoing study in Business Informatics.f
+        a Frontend developer with an ongoing study in Business Informatics.
         {` `}
         <br />{' '}
         <Social
