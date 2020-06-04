@@ -24,4 +24,8 @@ test:
   phases:
     test:
       commands:
-        - npm test
+        - npm test -- --coverage
+  artifacts:
+    baseDirectory: coverage
+    files:
+      - '**/*'
