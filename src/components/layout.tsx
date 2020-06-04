@@ -1,12 +1,12 @@
-import { PageRendererProps } from 'gatsby';
-import React, { ReactNode } from 'react';
+import { PageRendererProps, PageProps } from 'gatsby';
+import React, { ReactNode, FC } from 'react';
 import styled from 'styled-components';
 
-import FadeLink from './link';
+import FadeLink from './fadeLink';
 import ThemeToggle from './themeToggle';
 import { rhythm, styledScale } from '../utils/typography';
 
-interface Props extends PageRendererProps {
+interface LayoutProps extends PageRendererProps {
   title: string;
   children: ReactNode;
 }
@@ -35,7 +35,7 @@ const Content = styled.div`
   padding: ${`${rhythm(1.5)} ${rhythm(3 / 4)}`};
 `;
 
-const Layout = (props: Props) => {
+const Layout: FC<LayoutProps> = (props: LayoutProps) => {
   const { location, title, children } = props;
   const rootPath = `/`;
 
@@ -53,7 +53,9 @@ const Layout = (props: Props) => {
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <a href="https://www.gatsbyjs.org" rel="noreferrer">
+          Gatsby
+        </a>
       </footer>
     </Content>
   );

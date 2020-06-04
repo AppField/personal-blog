@@ -1,4 +1,4 @@
-import React, { createContext } from "react"
+import React, { createContext, useMemo } from "react"
 
 import { COLORS, COLOR_MODE_KEY, INITIAL_COLOR_MODE_CSS_PROP } from "./const"
 
@@ -20,7 +20,7 @@ const ThemeProvider = ({ children }) => {
     rawSetColorMode(initialColorValue)
   }, [])
 
-  const contextValue = React.useMemo(() => {
+  const contextValue = useMemo(() => {
     function setColorMode(newValue) {
       const root = window.document.documentElement
 

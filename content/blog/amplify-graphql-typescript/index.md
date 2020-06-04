@@ -1,5 +1,5 @@
 ---
-title: AWS Amplify GraphQL API with a React TypeScript Frontend
+title: How to use a AWS Amplify GraphQL API with a React TypeScript Frontend
 date: '2020-06-01'
 description: 'Setup an AWS Amplify GraphQL API and consume it in a React Frontend TypeScript App. Improve type-safety for GraphQL calls and reduce boilerplate code'
 ---

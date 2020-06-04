@@ -6,7 +6,7 @@
  */
 
 import { graphql, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
+import Image, { FixedObject } from 'gatsby-image';
 import React, { ComponentProps, forwardRef, Ref } from 'react';
 import styled from 'styled-components';
 import { rhythm } from '../utils/typography';
@@ -44,7 +44,7 @@ const Social = styled.a`
 `;
 
 const Bio = () => {
-  const data = useStaticQuery(graphql`
+  const { avatar, site } = useStaticQuery<PureBioProps>(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
@@ -70,12 +70,39 @@ const Bio = () => {
     }
   `);
 
-  const { author, social } = data.site.siteMetadata;
+  return <PureBio avatar={avatar} site={site} />;
+};
+
+export interface PureBioProps {
+  avatar: {
+    childImageSharp: {
+      fixed: FixedObject;
+    };
+  };
+  site: {
+    siteMetadata: {
+      author: {
+        name: string;
+      };
+      social: {
+        twitter: string;
+        linkedin: string;
+        xing: string;
+        github: string;
+      };
+    };
+  };
+}
+
+export const PureBio: React.FC<PureBioProps> = ({ avatar, site }) => {
+  // const avatar = avatar;
+  const author = site.siteMetadata.author;
+  const social = site.siteMetadata.social;
 
   return (
     <Content>
       <Avatar
-        fixed={data.avatar.childImageSharp.fixed}
+        fixed={avatar.childImageSharp.fixed}
         alt={author.name}
         imgStyle={{ borderRadius: '50%' }}
       />
@@ -84,9 +111,6 @@ const Bio = () => {
         a Frontend developer with an ongoing study in Business Informatics.
         {` `}
         <br />{' '}
-        <Social href={`https://twitter.com/${social.twitter}`} target="_blank">
-          <FontAwesomeIcon icon={faTwitter} />
-        </Social>
         <Social
           href={`https://linkedin.com/${social.linkedin}`}
           target="_blank"
@@ -95,6 +119,9 @@ const Bio = () => {
         </Social>
         <Social href={`https://xing.com/${social.xing}`} target="_blank">
           <FontAwesomeIcon icon={faXing} />
+        </Social>
+        <Social href={`https://twitter.com/${social.twitter}`} target="_blank">
+          <FontAwesomeIcon icon={faTwitter} />
         </Social>
         <Social href={`https://github.com/${social.github}`} target="_blank">
           <FontAwesomeIcon icon={faGithub} />

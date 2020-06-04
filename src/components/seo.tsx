@@ -5,30 +5,25 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import { Helmet } from "react-helmet"
+import { graphql, useStaticQuery } from 'gatsby';
+import React, { FC } from 'react';
+import { Helmet } from 'react-helmet';
 
-interface Meta {
-  name: string
-  content: string
+export interface Meta {
+  name: string;
+  content: string;
 }
 
-interface Props {
-  title: string
-  lang?: string
-  meta?: Meta[]
-  keywords?: string[]
-  description?: string
+export interface MetaProps {
+  title: string;
+  lang?: string;
+  meta?: Meta[];
+  keywords?: string[];
+  description?: string;
 }
 
-const SEO = (props: Props) => {
-  const lang = props.lang || "en"
-  const meta = props.meta || []
-  const keywords = props.keywords || []
-  const description = props.description || ""
-
-  const { site } = useStaticQuery(
+const SEO = (props: MetaProps) => {
+  const data = useStaticQuery<PureSEOProps>(
     graphql`
       query {
         site {
@@ -42,17 +37,37 @@ const SEO = (props: Props) => {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  return <PureSEO {...props} site={data.site} />;
+};
 
+export interface PureSEOProps {
+  site: {
+    siteMetadata: {
+      title: string;
+      description: string;
+      author: {
+        name: string;
+      };
+    };
+  };
+}
+
+export const PureSEO: FC<PureSEOProps & MetaProps> = props => {
+  const lang = props.lang || 'en';
+  const meta = props.meta || [];
+  const keywords = props.keywords || [];
+  const description = props.description || '';
+
+  const metaDescription = description || props.site.siteMetadata.description;
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={props.title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${props.site.siteMetadata.title}`}
       meta={[
         {
           content: metaDescription,
@@ -75,7 +90,7 @@ const SEO = (props: Props) => {
           name: `twitter:card`,
         },
         {
-          content: site.siteMetadata.author,
+          content: props.site.siteMetadata.author.name,
           name: `twitter:creator`,
         },
         {
@@ -97,7 +112,7 @@ const SEO = (props: Props) => {
         )
         .concat(meta)}
     />
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;
