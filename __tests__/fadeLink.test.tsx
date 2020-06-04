@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import InternalProvider from 'gatsby-plugin-transition-link/context/InternalProvider';
 
-import FadeLink from '../components/fadeLink';
+import FadeLink from '../src/components/fadeLink';
 
 describe('<FadeLink/>', () => {
   it('renders correctly', () => {

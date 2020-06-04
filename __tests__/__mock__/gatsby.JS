@@ -22,6 +22,8 @@ module.exports = {
         href: to,
       })
   ),
-  StaticQuery: jest.fn(),
+  StaticQuery: {
+    mockImplementationOnce: jest.fn(),
+  },
   useStaticQuery: jest.fn(),
 };

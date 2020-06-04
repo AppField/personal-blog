@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
-import FadeLink from '../components/link';
+import FadeLink from '../components/fadeLink';
 import SEO from '../components/seo';
 import { Query, SitePageContext } from '../graphql-types';
 import { styledScale, rhythm } from '../utils/typography';
