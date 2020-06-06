@@ -20,12 +20,12 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
-test:
-  phases:
-    test:
-      commands:
-        - npm test -- --coverage
-  artifacts:
-    baseDirectory: coverage
-    files:
-      - '**/*'
+# test:
+#   phases:
+#     test:
+#       commands:
+#         - npm test -- --coverage
+#   artifacts:
+#     baseDirectory: coverage
+#     files:
+#       - '**/*'
