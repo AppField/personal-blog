@@ -21,7 +21,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Content = styled.div`
   display: flex;
-  margin-bottom: ${rhythm(2.5)};
+  margin-bottom: ${rhythm(1.5)};
 `;
 
 const GatsbyImage = forwardRef(
@@ -108,7 +108,9 @@ export const PureBio: React.FC<PureBioProps> = ({ avatar, site }) => {
       />
       <p>
         My name is <strong>{author.name}</strong>. I live and work in Vienna as
-        a Frontend developer with an ongoing study in Business Informatics.
+        a frontend developer with an ongoing study in Business Informatics. On
+        this blog, I will mostly write about frontend development in combination
+        with serverless services by Amazon Web Services (AWS).
         {` `}
         <br />{' '}
         <Social
