@@ -26,6 +26,7 @@ const StyledLink = styled(FadeLink)`
   box-shadow: none;
   color: inherit;
   text-decoration: none;
+  font-size: 2.5rem;
 `;
 
 const Content = styled.div`
@@ -39,14 +40,14 @@ const Layout: FC<LayoutProps> = (props: LayoutProps) => {
   const { location, title, children } = props;
   const rootPath = `/`;
 
-  const HeaderTitle = location.pathname === rootPath ? StyledH1 : StyledH3;
+  // const HeaderTitle = location.pathname === rootPath ? StyledH1 : StyledH3;
 
   return (
     <Content>
       <header>
-        <HeaderTitle>
+        <StyledH1>
           <StyledLink to={`/`}>{title}</StyledLink>
-        </HeaderTitle>
+        </StyledH1>
         <ThemeToggle />
       </header>
       <main>{children}</main>

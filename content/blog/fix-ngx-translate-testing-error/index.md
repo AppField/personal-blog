@@ -340,5 +340,3 @@ npm run tests
 `ngx-translate` provides some services to translate text. These have to be mocked inside the test files. For that, we created a reusable module called `TranslateTestingModule` which can be imported to different test files. The Module can be located inside a `shared` folder, a `testing` folder or another shared library you use.
 
 You can find a working example in a [Github Repository](https://github.com/AppField/demo-ngx-translate-testing)
-
-In case anything's unclear just ask me, please :)

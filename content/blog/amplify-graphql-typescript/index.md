@@ -120,20 +120,18 @@ Here are some Mutations and Queries to create and test demo data:
 
 ```graphql
 mutation CreateTodo {
-  createTodo(input: {
-    name: "Blog Post",
-    description: "Write a Blog Post about Amplify"})
-  {
+  createTodo(
+    input: { name: "Blog Post", description: "Write a Blog Post about Amplify" }
+  ) {
     description
     name
   }
 }
 
 mutation CreateTodo2 {
-  createTodo(input: {
-    name: "Dinner",
-    description: "Buy groceries and cook dinner"})
-  {
+  createTodo(
+    input: { name: "Dinner", description: "Buy groceries and cook dinner" }
+  ) {
     description
     name
   }
@@ -368,8 +366,5 @@ In `useEffect` we only call the new `subscribeGraphQL` wrapper function, passing
 ## Summary
 
 Amplify allows to scaffold a GraphQL API very quickly and even auto-generates TypeScript code for the frontend. With some wrapper functions the boilerplate code can be reduced and type-safety embraced.
-
-Feel free to leave a comment when you have any questions!
-You can find me on [Twitter](https://twitter.com/RMuhlfeldner)
 
 The full source code is on [GitHub](https://github.com/AppField/amplify-typescript-demo)
