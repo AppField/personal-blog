@@ -2,7 +2,7 @@
 
 exports[`<Bio/> renders correctly 1`] = `
 <div
-  className="sc-AxjAm hBBkVs"
+  className="sc-AxjAm ewWNzu"
 >
   <div
     className="sc-AxirZ dKkWPT gatsby-image-wrapper"
@@ -57,7 +57,7 @@ exports[`<Bio/> renders correctly 1`] = `
     <strong>
       author name
     </strong>
-    . I live and work in Vienna as a Frontend developer with an ongoing study in Business Informatics.
+    . I live and work in Vienna as a frontend developer with an ongoing study in Business Informatics. On this blog, I will mostly write about frontend development in combination with serverless services by Amazon Web Services (AWS).
      
     <br />
      
