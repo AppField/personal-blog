@@ -8,19 +8,13 @@ import { MarkdownRemark } from '../graphql-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { rhythm } from '../utils/typography';
+import PageTitle from '../components/pageTitle';
 
 const StyledLink = styled(Link)`
   box-shadow: none;
   text-decoration: none;
-  /* :hover {
-    cursor: pointer;
-  } */
 `;
 
-const PageTitle = styled.h2`
-  margin-top: 0;
-  margin-bottom: 3rem;
-`;
 
 const BlogCard = styled.div`
   margin-bottom: 3.5rem;
