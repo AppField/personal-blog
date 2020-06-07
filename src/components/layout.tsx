@@ -51,7 +51,8 @@ const Layout: FC<LayoutProps> = (props: LayoutProps) => {
       </header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}{' '}
+        <Link to="/legalDetails">Legal Details</Link>, Built with
         {` `}
         <a href="https://www.gatsbyjs.org" rel="noreferrer" target="__blank">
           Gatsby

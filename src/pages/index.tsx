@@ -8,19 +8,7 @@ import { MarkdownRemark } from '../graphql-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { rhythm } from '../utils/typography';
-
-const StyledLink = styled(Link)`
-  box-shadow: none;
-  text-decoration: none;
-  /* :hover {
-    cursor: pointer;
-  } */
-`;
-
-const PageTitle = styled.h2`
-  margin-top: 0;
-  margin-bottom: 3rem;
-`;
+import PageTitle from '../components/pageTitle';
 
 const BlogCard = styled.div`
   margin-bottom: 3.5rem;
@@ -92,7 +80,7 @@ const BlogIndex = (props: Props) => {
 
         const title = frontmatter.title || fields.slug;
         return (
-          <StyledLink to={slug} key={slug}>
+          <Link to={slug} key={slug}>
             <BlogCard>
               <h3>
                 {title}
@@ -107,7 +95,7 @@ const BlogIndex = (props: Props) => {
                 }}
               />
             </BlogCard>
-          </StyledLink>
+          </Link>
         );
       })}
     </Layout>
