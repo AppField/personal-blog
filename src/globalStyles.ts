@@ -17,6 +17,10 @@ const GlobalStyles = createGlobalStyle`
     color: var(--color-primary);
     text-decoration: none;
     box-shadow: none;
+    transition: box-shadow 200ms ease-in
+  }
+  a:hover {
+    box-shadow: 0 1px 0 0 currentColor
   }
 
   blockquote {
