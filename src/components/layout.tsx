@@ -1,8 +1,7 @@
-import { PageRendererProps, PageProps } from 'gatsby';
+import { PageRendererProps, PageProps, Link } from 'gatsby';
 import React, { ReactNode, FC } from 'react';
 import styled from 'styled-components';
 
-import FadeLink from './fadeLink';
 import ThemeToggle from './themeToggle';
 import { rhythm, styledScale } from '../utils/typography';
 
@@ -22,7 +21,7 @@ const StyledH3 = styled.h3`
   margin-top: 0;
 `;
 
-const StyledLink = styled(FadeLink)`
+const StyledLink = styled(Link)`
   box-shadow: none;
   color: inherit;
   text-decoration: none;
@@ -54,7 +53,7 @@ const Layout: FC<LayoutProps> = (props: LayoutProps) => {
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
-        <a href="https://www.gatsbyjs.org" rel="noreferrer">
+        <a href="https://www.gatsbyjs.org" rel="noreferrer" target="__blank">
           Gatsby
         </a>
       </footer>

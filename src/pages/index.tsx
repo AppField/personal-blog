@@ -1,18 +1,20 @@
-import { graphql, PageRendererProps, useStaticQuery } from 'gatsby';
+import { graphql, PageRendererProps, useStaticQuery, Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
-import FadeLink from '../components/fadeLink';
 import SEO from '../components/seo';
 import { MarkdownRemark } from '../graphql-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { rhythm } from '../utils/typography';
 
-const StyledLink = styled(FadeLink)`
+const StyledLink = styled(Link)`
   box-shadow: none;
   text-decoration: none;
+  /* :hover {
+    cursor: pointer;
+  } */
 `;
 
 const PageTitle = styled.h2`
