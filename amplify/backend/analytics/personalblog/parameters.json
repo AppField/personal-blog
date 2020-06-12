@@ -1,11 +1,11 @@
 {
     "appName": "personalblog",
-    "roleName": "pinpointLambdaRole68e45b26",
-    "cloudformationPolicyName": "cloudformationPolicy68e45b26",
-    "cloudWatchPolicyName": "cloudWatchPolicy68e45b26",
-    "pinpointPolicyName": "pinpointPolicy68e45b26",
-    "authPolicyName": "pinpoint_amplify_68e45b26",
-    "unauthPolicyName": "pinpoint_amplify_68e45b26",
+    "roleName": "pinpointLambdaRoleaf183e2d",
+    "cloudformationPolicyName": "cloudformationPolicyaf183e2d",
+    "cloudWatchPolicyName": "cloudWatchPolicyaf183e2d",
+    "pinpointPolicyName": "pinpointPolicyaf183e2d",
+    "authPolicyName": "pinpoint_amplify_af183e2d",
+    "unauthPolicyName": "pinpoint_amplify_af183e2d",
     "authRoleName": {
         "Ref": "AuthRoleName"
     },
