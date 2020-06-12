@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "personalblog_identitypool_c9eb42a0",
+    "identityPoolName": "personalblog_identitypool_3fca18c9",
     "allowUnauthenticatedIdentities": true,
     "authSelections": "identityPoolOnly",
-    "resourceName": "cognito09a6f540",
+    "resourceName": "cognito568be469",
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",
