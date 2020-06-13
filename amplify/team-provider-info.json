@@ -1,4 +1,25 @@
 {
+    "production": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-personalblog-production-130324-authRole",
+            "UnauthRoleArn": "arn:aws:iam::621722768502:role/amplify-personalblog-production-130324-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::621722768502:role/amplify-personalblog-production-130324-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "amplify-personalblog-production-130324-deployment",
+            "UnauthRoleName": "amplify-personalblog-production-130324-unauthRole",
+            "StackName": "amplify-personalblog-production-130324",
+            "StackId": "arn:aws:cloudformation:eu-central-1:621722768502:stack/amplify-personalblog-production-130324/19eccb10-acad-11ea-aafe-0a233b5d9d4c",
+            "AmplifyAppId": "d2iyvv4g6fxkog"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d2iyvv4g6fxkog",
+                    "type": "cicd"
+                }
+            }
+        }
+    },
     "develop": {
         "awscloudformation": {
             "AuthRoleName": "amplify-personalblog-develop-132536-authRole",
