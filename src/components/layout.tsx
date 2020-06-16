@@ -29,10 +29,21 @@ const StyledLink = styled(Link)`
 `;
 
 const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
   max-width: ${rhythm(28)};
   padding: ${`${rhythm(1.5)} ${rhythm(3 / 4)}`};
+
+  main {
+    flex: 1;
+  }
+`;
+
+const StyledFooter = styled.footer`
+  font-size: ${rhythm(0.9 / 2)};
 `;
 
 const Layout: FC<LayoutProps> = (props: LayoutProps) => {
@@ -50,14 +61,14 @@ const Layout: FC<LayoutProps> = (props: LayoutProps) => {
         <ThemeToggle />
       </header>
       <main>{children}</main>
-      <footer>
+      <StyledFooter>
         © {new Date().getFullYear()}{' '}
         <Link to="/legalDetails">Legal Details</Link>, Built with
         {` `}
         <a href="https://www.gatsbyjs.org" rel="noreferrer" target="__blank">
           Gatsby
         </a>
-      </footer>
+      </StyledFooter>
     </Content>
   );
 };
