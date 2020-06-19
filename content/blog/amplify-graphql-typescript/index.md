@@ -57,7 +57,7 @@ This command wil initialize Amplify inside our project and it needs some informa
 Now the GraphQL API can be added by running:
 
 ```shell
-amplify init
+amplify add api
 ```
 
 This will starty by asking some questions:
