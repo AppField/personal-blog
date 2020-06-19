@@ -42,7 +42,7 @@ This command wil initialize Amplify inside our project and it needs some informa
  Enter a name for the project `amplifytypescriptdem`
  Enter a name for the environment `dev`
  Choose your default editor: `Visual Studio Code`
- Choose the type of app that you're building `javascript`
+ Choose the type of app that you\'re building `javascript`
  What javascript framework are you using `react`
  Source Directory Path: `src`
  Distribution Directory Path: `build`
